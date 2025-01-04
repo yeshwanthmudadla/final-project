@@ -41,3 +41,7 @@ x = data.drop(columns = ['label'])
 tabular_data = pd.read_csv('HAM10000_metadata.csv')
 tabular_data.head()
  = {4: ('nv', ' melanocytic nevi'), 6: ('mel', 'melanoma'), 2 :('bkl', 'benign keratosis-like lesions'), 1:('bcc' , 'classes basal cell carcinoma'), 5: ('vasc', ' pyogenic granulomas and hemorrhage'), 0: ('akiec', 'Actinic keratoses and intraepithelial carcinomae'),  3: ('df', 'dermatofibroma')}
+sns.countplot(x = 'dx', data = tabular_data)
+plt.xlabel('Disease', size=12)
+plt.ylabel('Frequency', size=12)
+plt.title('Frequency Distribution of Classes', size=16)
