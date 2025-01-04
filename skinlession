@@ -40,3 +40,4 @@ y = data['label']
 x = data.drop(columns = ['label'])
 tabular_data = pd.read_csv('HAM10000_metadata.csv')
 tabular_data.head()
+ = {4: ('nv', ' melanocytic nevi'), 6: ('mel', 'melanoma'), 2 :('bkl', 'benign keratosis-like lesions'), 1:('bcc' , 'classes basal cell carcinoma'), 5: ('vasc', ' pyogenic granulomas and hemorrhage'), 0: ('akiec', 'Actinic keratoses and intraepithelial carcinomae'),  3: ('df', 'dermatofibroma')}
