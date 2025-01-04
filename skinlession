@@ -7,3 +7,32 @@ import os, cv2
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, Flatten, Dense, MaxPool2D
+import os
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# Define the directory path
+directory_path = r"C:\Users\Dell\Desktop\HAM10000_images_part_1"
+
+# List all files in the directory
+image_files = [f for f in os.listdir(directory_path) if f.endswith('.jpg')]
+
+# Select a few sample image files to display
+sample_images = image_files[:5]  # Display the first 5 images, change the range if needed
+
+# Plot the images
+plt.figure(figsize=(10, 10))
+
+for idx, image_name in enumerate(sample_images):
+    image_path = os.path.join(directory_path, image_name)
+    
+    # Open the image
+    image = Image.open(image_path)
+    
+    # Display the image
+    plt.subplot(1, len(sample_images), idx + 1)
+    plt.imshow(image)
+    plt.axis('off')  # Hide the axes
+    plt.title(image_name)
+
+plt.show()
