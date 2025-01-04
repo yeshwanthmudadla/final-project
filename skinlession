@@ -36,3 +36,5 @@ for idx, image_name in enumerate(sample_images):
     plt.title(image_name)
 
 plt.show()
+y = data['label']
+x = data.drop(columns = ['label'])
