@@ -38,3 +38,5 @@ for idx, image_name in enumerate(sample_images):
 plt.show()
 y = data['label']
 x = data.drop(columns = ['label'])
+tabular_data = pd.read_csv('HAM10000_metadata.csv')
+tabular_data.head()
