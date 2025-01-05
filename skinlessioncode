@@ -79,4 +79,7 @@ model.add(Dense(64, activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(7, activation='softmax'))
 model.summary()
+callback = tf.keras.callbacks.ModelCheckpoint(filepath='best_model.keras',
+                                              monitor='val_acc', mode='max',
+                                              verbose=1)
 
