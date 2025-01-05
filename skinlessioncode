@@ -105,4 +105,5 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'val'], loc='upper left')
 plt.show()
+model.load_weights('best_model.keras')
 
