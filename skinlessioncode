@@ -82,4 +82,12 @@ model.summary()
 callback = tf.keras.callbacks.ModelCheckpoint(filepath='best_model.keras',
                                               monitor='val_acc', mode='max',
                                               verbose=1)
+model.compile(loss = 'sparse_categorical_crossentropy',
+             optimizer = 'adam',
+              metrics = ['accuracy'])
+history = model.fit(X_train,
+                    Y_train,
+                    validation_split=0.2,
+                    batch_size = 128,
+                    epochs = 20,
 
