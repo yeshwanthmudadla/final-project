@@ -90,4 +90,12 @@ history = model.fit(X_train,
                     validation_split=0.2,
                     batch_size = 128,
                     epochs = 20,
+                    callbacks=[callback])
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
 
